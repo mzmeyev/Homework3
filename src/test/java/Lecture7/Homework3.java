@@ -1,3 +1,5 @@
+package Lecture7;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,17 +25,17 @@ public class Homework3 {
         // Dismiss Pop-ops
         driver.findElement(By.className("btn-close")).click(); //if only two adds appear during test, then comment this line
         driver.findElement(By.className("_24EHh")).click();
-        driver.findElement(By.className("close-btn")).click();
+        //driver.findElement(By.className("close-btn")).click();
         //  Find element Price and enter some value
         driver.findElement(By.className("search-key")).sendKeys("tattoo");
         // Find and click search button
         driver.findElement(By.className("search-button")).click();
         //  Find element Price and enter some value
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[1]/span[1]")).click();
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[1]/span[1]/span[2]/input")).sendKeys("10");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[1]/span[1]/span[3]/input")).sendKeys("20");
+        driver.findElement(By.xpath("//span[@class='next-input next-small min-price']")).click();
+        driver.findElement(By.xpath("//input[@placeholder='min']")).sendKeys("10");
+        driver.findElement(By.xpath("//input[@placeholder='max']")).sendKeys("20");
         // Press OK button
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div[1]/div[2]/div[1]/span[1]/a")).click();
+        driver.findElement(By.xpath("//a[@class='ui-button narrow-go']")).click();
         // Wait for 5 seconds
         try {
             Thread.sleep(5000);

@@ -1,3 +1,5 @@
+package Lecture7;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
