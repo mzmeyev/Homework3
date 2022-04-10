@@ -1,5 +1,6 @@
 package Homework4.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BasePage {
@@ -13,6 +14,16 @@ public class BasePage {
         driver.get(url);
         driver.manage().window().maximize();
 
+    }
+
+    public void scrollDownOnce() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+    }
+
+    public void scrollDownTwice() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,200)");
     }
 
     public void closeChrome() {
